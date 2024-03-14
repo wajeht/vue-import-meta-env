@@ -4,6 +4,6 @@ import App from './App.vue'
 
 const app = createApp(App);
 
-console.log(import.meta);
+console.log(import.meta.env);
 
 app.mount('#app')

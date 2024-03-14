@@ -4,8 +4,6 @@ import App from './App.vue'
 
 const app = createApp(App);
 
-if (import.meta.env.VITE_SENTRY_ENABLED) {
-  console.log('sentry is working!!');
-}
+console.log(import.meta);
 
 app.mount('#app')

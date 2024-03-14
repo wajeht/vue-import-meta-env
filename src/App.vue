@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const env = import.meta;
+const env = import.meta.env;
 </script>
 
 <template>

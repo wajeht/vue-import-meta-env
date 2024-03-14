@@ -1,4 +1,4 @@
-FROM node:latest as build-stage
+FROM node:20.6.1-alpine as as build-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
@@ -15,3 +15,5 @@ RUN apt-get update && apt-get install -y curl
 EXPOSE 80
 
 HEALTHCHECK CMD curl -f http://localhost:80/ || exit 1
+
+CMD ["nginx", "-g", "daemon off;"]
